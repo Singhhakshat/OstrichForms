@@ -1,38 +1,276 @@
-.App {
-  text-align: center;
+/* Index Page */
+
+.index-container{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.index-holder{
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  padding-top: 80px;
+  width: 70vw;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main-text{
+  padding-bottom: 40px;
+  font-size: 5rem;
+  letter-spacing: 2px;
+}
+
+.index-button{
+  background-color: rgb(37, 37, 37);
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 20px;
+  width: 10rem;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  font-weight: 800;
+}
+
+.index-button-test:hover{
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 821px) {
+  .index-holder{
+    width: 90vw;
+  }
+
+  .main-text{
+    font-size: 15vw;
+  }
+
+  .index-button-holder{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .index-button{
+    width: 15rem;
+    font-size: 1.1rem
+  }
+
+}
+
+/* Error Page */
+
+.error-page-container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.error-text{
+  animation: change 1s step-end infinite;
+  font-size: 3rem;
+}
+
+@keyframes change{
+  0% {
+    color: lightcoral;
+  }
+  25% {
+    color: lightgreen;
+  }
+  50% {
+    color: lightsalmon;
+  }
+  75% {
+    color: lightblue;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Signup and SignIn Page */
+
+.sign-container{
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: whitesmoke;
+}
+
+.sign-holder{
+  display: flex;
+  padding: 20px;
+  width: 30vw;
+  flex-direction: column;
+  color: rgb(37, 37, 37);
+  font-size: 1.8rem;
+}
+
+.sign-text{
+  margin-bottom: 30px;
+}
+
+.sign-form input{
+  width: 90%;
+  display: block;
+  padding: 12px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.sign-button{
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 95%;
+  color: white;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.sign-option{
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+.sign-link{
+  color: black;
+}
+
+.forgot-password{
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 821px){
+  .sign-holder{
+    width: 90vw;
+    font-size: 5vw;
+  }
+}
+
+/* Dashboard */
+
+.dashboard-container{
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.new-form-button{
+  align-self: flex-end;
+  width: 10rem;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: rgb(37, 37, 37);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dashboard-holder{
+  display: flex;
+  flex-wrap: wrap;
+  height: 90%;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dashboard-forms{
+  flex: 2;
+  border-right: 1px solid black;
+  padding: 10px;
+}
+
+.dashboard-form-data{
+  flex: 6;
+  /* border: 2px solid black; */
+}
+
+.form-search{
+  border: none;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 10px;
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.dashboard-forms-list ul{
+  list-style: none;
+}
+
+.dashboard-forms-list li{
+  border-left: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  font-weight: 600;
+  cursor: pointer; 
+}
+
+.dashboard-list-element{
+  color: rgb(61, 61, 61);
+  text-decoration: none;
+}
+
+.dashboard-list-element:hover{
+  color: black;
+}
+
+.dashboard-form-data{
+  /* border: 1px solid black; */
+  padding: 20px;
+}
+
+.dashboard-form-title{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.dashboard-no-forms{
+  align-self: center;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-no-forms p{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.dashboard-no-forms-button{
+  color: white;
+  padding: 15px;
+  margin: 20px;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+.dashboard-no-forms-button:hover{
+  text-decoration: underline;
+}
+
+/* Form Page */
+
+.form-container{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
 }
